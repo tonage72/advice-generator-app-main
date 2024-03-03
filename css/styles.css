@@ -74,13 +74,12 @@ body {
 
 .dice-button {
 	position: absolute;
-	bottom: -4cqh;
-	/* bottom: -1.2rem; */
+	bottom: -1.2rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: var(--color-neon-green);
-	width: clamp(.5em, 28cqi, 2.5em);
+	width: clamp(.5em, 25cqi, 2.5em);
 	aspect-ratio: 1/1;
 	border-radius: 50%;
 	cursor: pointer;
