@@ -30,11 +30,13 @@ html {
 
 body {
 	background-color: var(--color-dark-blue);
+	height: 100vh;
 }
 
 .card {
-	position: relative;;
 	--margin-top: clamp(.5rem, 30vw, 4.5rem);
+
+	position: relative;;
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -46,7 +48,8 @@ body {
 	background-color: var(--color-dark-grayish-blue);
 	container: card / inline-size;
 	row-gap: 1rem;
-	padding: 1.5rem 0 2.5rem 0;
+	padding: 1.5rem 1rem 2.5rem 1rem;
+	container: card / inline-size;
 }
 
 .advice-line {
@@ -56,8 +59,16 @@ body {
 	letter-spacing: .3em;
 }
 
+.advice-text {
+	text-align: center;
+}
+
 .divider {
 	width: 90%;
+}
+
+.divider-desktop {
+	display: none;
 }
 
 .dice-button {
@@ -70,8 +81,33 @@ body {
 	width: 2.5rem;
 	aspect-ratio: 1/1;
 	border-radius: 50%;
+	cursor: pointer;
 }
 
 .dice-button img {
 	width: 40%;
+}
+
+.dice-button:hover {
+	box-shadow: 0px 0px 30px var(--color-neon-green);
+}
+
+@media (min-width: 500px) {
+	.divider {
+		display: none;
+	}
+
+	.divider-desktop {
+		display: block;
+	}
+
+	.card {
+		margin-top: 0;
+	}
+		
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
