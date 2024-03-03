@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+html {
+	font-family: "Manrope", sans-serif;
+  	font-weight: 800;
+	font-size: 28px;
+	color: var(--color-light-cyan);
+}
+
+:root {
+	--color-light-cyan: hsl(193, 38%, 86%);
+	--color-neon-green: hsl(150, 100%, 66%);
+	--color-grayish-blue: hsl(217, 19%, 38%);
+	--color-dark-grayish-blue: hsl(217, 19%, 24%);
+	--color-dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+	background-color: var(--color-dark-blue);
+}
+
+.card {
+	position: relative;;
+	--margin-top: clamp(.5rem, 30vw, 4.5rem);
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	max-width: 25rem;
+	border-radius: .3rem;
+	margin: var(--margin-top) auto 0 auto;
+	background-color: var(--color-dark-grayish-blue);
+	container: card / inline-size;
+	row-gap: 1rem;
+	padding: 1.5rem 0 2.5rem 0;
+}
+
+.advice-line {
+	color: var(--color-neon-green);
+	font-size: .4em;
+	text-transform: uppercase;
+	letter-spacing: .3em;
+}
+
+.divider {
+	width: 90%;
+}
+
+.dice-button {
+	position: absolute;
+	bottom: -1.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-neon-green);
+	width: 2.5rem;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+}
+
+.dice-button img {
+	width: 40%;
+}
