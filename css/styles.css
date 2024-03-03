@@ -42,6 +42,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 90%;
+	height: fit-content;
 	max-width: 25rem;
 	border-radius: .3rem;
 	margin: var(--margin-top) auto 0 auto;
@@ -74,12 +75,12 @@ body {
 
 .dice-button {
 	position: absolute;
-	bottom: -1.2rem;
+	bottom: -1.2em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: var(--color-neon-green);
-	width: clamp(.5em, 25cqi, 2.5em);
+	width: 2.5em;
 	aspect-ratio: 1/1;
 	border-radius: 50%;
 	cursor: pointer;
@@ -110,5 +111,21 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+}
+
+@media (max-width: 315px) {
+	.divider {
+		display: none;
+	}
+
+	.dice-button {
+		position: relative;
+		bottom: 0;
+		width: 1rem;
+	}
+
+	.card {
+		padding-bottom: 10px;
 	}
 }
