@@ -47,20 +47,21 @@ body {
 	margin: var(--margin-top) auto 0 auto;
 	background-color: var(--color-dark-grayish-blue);
 	container: card / inline-size;
-	row-gap: 1rem;
-	padding: 1.5rem 1rem 2.5rem 1rem;
+	row-gap: clamp(.2rem, 4vw, 1rem);
+	padding: clamp(.2rem, 10vw, 1.5rem) clamp(.2rem, 5vw, 1rem) clamp(.2rem, 15vw, 2.5rem) clamp(.2rem, 5vw, 1rem);
 	container: card / inline-size;
 }
 
 .advice-line {
 	color: var(--color-neon-green);
-	font-size: .4em;
+	font-size: clamp(.1rem, 4cqi, .4rem);
 	text-transform: uppercase;
 	letter-spacing: .3em;
 }
 
 .advice-text {
 	text-align: center;
+	font-size: clamp(.2rem, 10cqi, 1rem);
 }
 
 .divider {
@@ -73,12 +74,13 @@ body {
 
 .dice-button {
 	position: absolute;
-	bottom: -1.2rem;
+	bottom: -4cqh;
+	/* bottom: -1.2rem; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: var(--color-neon-green);
-	width: 2.5rem;
+	width: clamp(.5em, 28cqi, 2.5em);
 	aspect-ratio: 1/1;
 	border-radius: 50%;
 	cursor: pointer;

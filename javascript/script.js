@@ -9,6 +9,7 @@ function getAdvice() {
 	  .then(res => res.json())
 	  .then(res => {
 		adviceText.innerHTML = "\"" + res.slip.advice + "\"";
+		adviceNumber.innerHTML = res.slip.id;
 	  })
 	  .catch(err => console.error(err));
 }
